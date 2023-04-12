@@ -1,0 +1,32 @@
+
+package apruebo-o-no-apruebo;
+
+/**
+ *
+ * @author Marina
+ */
+public class apruebo-o-no-apruebo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // Variables
+ String nombre = "Marina";
+
+        int nota = ≥6;
+        //inicio programa
+        System.out.println("----Nota del examen-----");
+        System.out.println("--->Nombre del alumno:" + nombre);
+        System.out.println("---Nota del alumno:" + nota);
+
+        System.out.println("Su nombre" + nota);
+        if (nota ≥6){
+        System.out.println("---Esta aprobado---");
+        }
+        else {
+        System.out.println("---No aprobo la materia, debe estudiar mas!---");
+        }
+    }
+    
+}
