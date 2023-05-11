@@ -1,6 +1,7 @@
 
 package ej14renaultjosecar;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Ej14RenaultJoseCar {
@@ -15,6 +16,10 @@ public class Ej14RenaultJoseCar {
      String gama = "";
      String usado = "";
      String dominio = "";
+     String Logan = "";
+     String Twingo = "";
+     String Kangoo = "";
+     
      int dni;
      int tel;
      int importe;
@@ -58,12 +63,21 @@ public class Ej14RenaultJoseCar {
         Scanner leercuota85 = new Scanner(System.in);
         Scanner leercuota240 = new Scanner(System.in);
     
-        System.out.println("=================================");
-        System.out.println("          CONCESIONARIA          ");
-        System.out.println("         RENAULT JOSECAR         ");
-        System.out.println(" Venta de 0KM - Planes de Ahorro ");        
-        System.out.println("=================================");
+        Date fecha = new Date ();
         
+        System.out.println("=================================================");
+        System.out.println("                   CONCESIONARIA                 ");
+        System.out.println("                  RENAULT JOSECAR                ");
+        System.out.println("         Venta de 0KM - Planes de Ahorro         ");        
+        System.out.println("=================================================");
+        System.out.println("                                                 ");
+        System.out.println("                  MODELOS AUTOMOVILES            ");
+        System.out.println(" Modelos  |   Logan   |    Twingo  |    Kangoo   ");
+        System.out.println("Gama Alta | 7.000.000 |  3.000.000 |  6.500.000 |");            
+        System.out.println("Gama Media| 6.000.000 |  3.500.000 |  7.000.000 |");
+        System.out.println("Gama Baja | 5.000.000 |  4.000.000 |  7.500.000 |");
+        System.out.println("-------------------------------------------------");
+                
         System.out.println("Ingrese el Nombre del Vendedor: ");
 	nombrevendedor = leernombrevendedor.next();
         
@@ -88,7 +102,7 @@ public class Ej14RenaultJoseCar {
         System.out.println("------Ingrese el Precio Total------");
 	importe = leerimporte.nextInt();
         
-        System.out.println("Entrega Vehiculo Usado: " );
+        System.out.println("Entrega Vehiculo Usado SI/No: " );
 	usado = leerusado.next();
         
         System.out.println("Dominio del Vehiculo Usado: " );
@@ -154,6 +168,8 @@ public class Ej14RenaultJoseCar {
         System.out.println("*********PRESUPUESTO*************");
         System.out.println("=================================");
         System.out.println("Atendido por el Vendedor: " + nombrevendedor);
+        System.out.println(fecha);
+        System.out.println("Validez: 5 dias Habiles a partir de la fecha ");
         System.out.println("=================================");
         System.out.println("-------DATOS DEL COMPRADOR------ ");   
         System.out.println("Nombre: " + nombrecliente);
