@@ -2,7 +2,7 @@
 package t.p.seguro.automotor;
 
 
-
+import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
@@ -22,15 +22,20 @@ public class TPSeguroAutomotor {
         int TC = 2000;
         int RT = 3000;
         
+               
         int coberAD=0;
         String coberturaT ="";
         String coberturaRT ="";
+        int G = 300;
+        int LD = 300;
+        int AM = 300;
+        int GPS = 300;
         
         int total;
         
         String marca;
         String modelos = "";
-        
+        Date fechaA = new Date ();
 
         //Logo
         ImageIcon Icon = new ImageIcon("src/imagenes/logo33.png");
@@ -54,10 +59,7 @@ public class TPSeguroAutomotor {
         
 
         //Solicitud de datos
-        
-        
-        
-        
+       
         String nombre = JOptionPane.showInputDialog(null,"Nombre del Cliente","Poliza",JOptionPane.QUESTION_MESSAGE);
         String apellido = JOptionPane.showInputDialog(null,"Apellido del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE);
         String telefono = JOptionPane.showInputDialog(null,"Telefono ","Poliza",JOptionPane.QUESTION_MESSAGE);
@@ -149,39 +151,74 @@ public class TPSeguroAutomotor {
         }
         
         //Cobertura Adicional
-        int resp1 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Coberturas Adicionales ?");
-            if(JOptionPane.OK_OPTION == resp1){
-                String [] coberturaAD1 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                JComboBox comboBoxcobAD1 = new JComboBox(coberturaAD1);    
-                JOptionPane.showMessageDialog(null, comboBoxcobAD1, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                coberAD+=300;         
-                    int resp2 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales ?");
-                        if(JOptionPane.OK_OPTION == resp2){
-                        Object [] coberturaAD2 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                        JComboBox comboBoxcobAD2 = new JComboBox(coberturaAD2);    
-                        JOptionPane.showMessageDialog(null, comboBoxcobAD2, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);                
-                            int resp3 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales ?");
-                                if(JOptionPane.OK_OPTION == resp3){
-                                Object [] coberturaAD3 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                                JComboBox comboBoxcobAD3 = new JComboBox(coberturaAD3);    
-                                JOptionPane.showMessageDialog(null, comboBoxcobAD3, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                                coberAD+=300;
-                                    int resp4 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales ?");
-                                        if(JOptionPane.OK_OPTION == resp4){
-                                        Object [] coberturaAD4 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                                        JComboBox comboBoxcobAD4 = new JComboBox(coberturaAD4);    
-                                        JOptionPane.showMessageDialog(null, comboBoxcobAD4, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                                        }
-            
-                } else {
-                System.out.print("");
+        int coberAD1 = JOptionPane.showOptionDialog(null,
+            "Seleccione cobertura Adicional : ",
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"Granizo","NO"},"");
+
+            switch(coberAD1){
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono: Granizo");
+            int contador = +1;
+            break;
+
+            default: 
             }
+        int coberAD2 = JOptionPane.showOptionDialog(null,
+            "Seleccione cobertura Adicional : ",
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"Llantas Deportivas","NO"},"");
+        int contador = 0;
+            
+            switch(coberAD2){
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
+            contador+=1;
+            break;
+            }
+        int coberAD3 = JOptionPane.showOptionDialog(null,
+            "Seleccione cobertura Adicional : ",
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"Asistencia Mecanica","NO"},"");
+            
+            switch(coberAD3){
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Asistencia Mecanica");
+            contador+=1;
+            break;
+            }
+        int coberAD4 = JOptionPane.showOptionDialog(null,
+            "Seleccione cobertura Adicional : ",
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"Localizador GPS","NO"},"");
+            
+            switch(coberAD4){
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Localizador GPS");
+            contador+=1;
+            break;
         }
+            
+            if(contador <2){
+               JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
+               coberAD = 300;
+               }else if(contador == 2 ){
+               JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
+               coberAD = 300;
+               }else if(contador >2){
+               JOptionPane.showMessageDialog(null,"Suma de adicional : " + 600);
+               coberAD = 600;
     }
+            
             System.out.println("--------------------------------------------");
             System.out.println("---------------Presupuesto------------------");
             System.out.println("------------Seguros Segurola----------------");
             System.out.println("--------------------------------------------");
+            System.out.println("------------Datos del usuario---------------");
             System.out.println("NOMBRE :" + nombre);
             System.out.println("APELLIDO :" + apellido);
             System.out.println("TELEFONO :" + telefono);
@@ -192,7 +229,7 @@ public class TPSeguroAutomotor {
             System.out.println("DOMINIO :" + dominio);
             System.out.println("ANTIGUEDAD DEL VEHICULO :" + antig);
             System.out.println("--------------------------------------------");
-           System.out.println("VALOR DE LA CUOTA :" + resultado);
+            System.out.println("VALOR DE LA CUOTA :" + resultado);
             System.out.println("TIPO DE COBERTURA :" + coberturaT);
             System.out.println("VALOR DE COBERTURA :" + cobertura);
             System.out.println("VALOR DE ADICIONALES :" + coberAD );
@@ -200,16 +237,20 @@ public class TPSeguroAutomotor {
             System.out.println("--------------------------------------------");
             System.out.println("VALOR DE LA PRIMA TOTAL :" + total );
             System.out.println("--------------------------------------------");
-            
+            System.out.println(fechaA);
             
             JOptionPane.showOptionDialog(null,
             "NOMBRE DEL CLIENTE :"+nombre+"\n APELLIDO DEL CLIENTE :"+apellido+"\n TELEFONO :"+telefono+"\n MAIL :"+mail+
-                    "\n MARCA :"+modelos+"\n DOMINIO :"+dominio+"\n ANTIGUEDAD DEL VEHICULO :"+antig+"\n VALOR DE LA CUOTA :"+resultado+
-                    "\n TIPO DE COBERTURA :"+cobertura+"\n ADICIONALES :"+coberAD+ "\n VALOR DE LA PRIMA TOTAL :"+total,
+                    "\n MARCA :"+marca+"\n MODELO :"+modelos+"\n DOMINIO :"+dominio+"\n ANTIGUEDAD DEL VEHICULO :"+antig+"\n VALOR DE LA CUOTA :"+resultado+
+                    "\n TIPO DE COBERTURA :"+coberturaT+"\n VALOR DE COBERTURA :"+cobertura+"\n ADICIONALES :"+coberAD+ "\n VALOR DE LA PRIMA TOTAL :"+total+"\n FECHA : "+fechaA,
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
-            JOptionPane.PLAIN_MESSAGE, Icon1,
+            JOptionPane.QUESTION_MESSAGE,Icon1,
             new Object[]{"IMPRIMIR POLIZA"},"");
     }
+        
 }
+    
+
+
 
