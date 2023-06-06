@@ -41,7 +41,7 @@ public class Ej12JuegoPiedraPTBart {
         
         //pedir al tipito la opcion nombre
         System.out.println("Jugador 2 Ingrese su Nombre: ");
-        jugador1 = leer.next();
+        jugador2 = leer.next();
         System.out.println("Jugador 1: La Maquina");
         //Dar inicio al juego
         System.out.println("------------------------------------");
@@ -54,7 +54,7 @@ public class Ej12JuegoPiedraPTBart {
         
                
         //Pedir al jugador que ingrese la opcion - JUGADA 1
-        System.out.print("\nIntroducir la opcion P/L/T : \n" + jugador2);
+        System.out.print("\nIntroducir la opcion P/L/T : \n" );
         resp1 = leer.next();
         
         //convertir los numeros en letras} 
@@ -73,29 +73,24 @@ public class Ej12JuegoPiedraPTBart {
                  
          
         //logica del juego- Jugada 1
-       if(resp1.equals("P") && resp2.equals("P")){
+        if(resp1.equals("P") && resp2.equals("P")){
         if(resp2 == resp1)
         System.out.println("EMPATE!!!" );
-        System.out.println("Ninguno Gana");
         punto1+=0;
         punto2+=0;
     }
         if(resp1.equals("L") && resp2.equals("L")){
         if(resp2 == resp1)
         System.out.println("EMPATE!!!");
-        System.out.println("Ninguno Gana");
         punto1+=0;
         punto2+=0;
     }
         if(resp1.equals("T") && resp2.equals("T")){
         if(resp2 == resp1)
         System.out.println("EMPATE!!!");
-        System.out.println("Ninguno Gana");
         punto1+=0;
         punto2+=0;
     }
-        
-        
         if(resp1.equals("P") && resp2.equals("L")){
         System.out.println("GANADOR La Máquina!!!");
         System.out.println( "Gana 1 punto");
@@ -106,9 +101,7 @@ public class Ej12JuegoPiedraPTBart {
         System.out.println("Gana 1 punto");
         punto2+=1;
     }
-    
-       
-       if(resp1.equals("L") && resp2.equals("P")){
+        if(resp1.equals("L") && resp2.equals("P")){
         System.out.println("GANADOR Jugador 2!!!" + jugador2);
         System.out.println("Gana 1 punto");
         punto2+=1;
@@ -119,9 +112,7 @@ public class Ej12JuegoPiedraPTBart {
         punto1+=1;
         
     }
-     
-       
-       if(resp1.equals("T") && resp2.equals("L")){
+        if(resp1.equals("T") && resp2.equals("L")){
         System.out.println("GANADOR Jugador 2!!!" + jugador2);
         System.out.println("Gana 1 punto");
         punto2+=1;
@@ -132,26 +123,29 @@ public class Ej12JuegoPiedraPTBart {
         punto1+=1;
     }
         
-       if(punto1<punto2){
+        if(punto1<punto2){
             System.out.println("------------------------------------");
             System.out.println("El ganador es el Jugador 2 : " +jugador2);
-        }else {
+        }else if(punto1>punto2){
             System.out.println("------------------------------------");
-            System.out.println("El ganador es la Maquina");
-        } 
-       
+            System.out.println("El ganador es el Jugador 1 : " +jugador1);
+        }else if(resp2 == resp1){
+            System.out.println("EMPATE: Ninguno Gana" +jugador2 +jugador1);
+        }
+    
         System.out.println("------------------------------------");
         System.out.println("-------------La P es Piedra---------");
         System.out.println("-------------La L es Papel----------");
         System.out.println("-------------La T es Tijera---------");
         System.out.println("------------------------------------");
        
-        //JUGADA 2
-        System.out.print("\nIntroducir la opcion P/L/T: \n" + jugador2);
+        //Pedir al jugador que ingrese la opcion - JUGADA 2
+        System.out.print("\nIntroducir la opcion P/L/T : \n" );
         resp12 = leer.next();
-       
-         //convertir los numeros en letras} 
-       switch(numerorandom){
+        
+        //convertir los numeros en letras} 
+        
+        switch(numerorandom){
             
             case 0:resp22="P";
                 break;
@@ -161,85 +155,82 @@ public class Ej12JuegoPiedraPTBart {
                 break;
         }
         //JUGADA MAQUINA 2
-        System.out.println("\nLa Opcion de La Maquina fue :\n" +resp22);
-        
+         System.out.println("\nLa Opcion de La Maquina fue :\n" +resp22);
+                 
+         
         //logica del juego- Jugada 2
-        
-        if(resp1.equals("P") && resp2.equals("P")){
-        System.out.println("\nEMPATE!!!\n" );
-        System.out.println("Ninguno Gana");
+        if(resp12.equals("P") && resp22.equals("P")){
+        if(resp22 == resp12)
+        System.out.println("EMPATE!!!" );
         punto1+=0;
         punto2+=0;
     }
-        if(resp1.equals("L") && resp2.equals("L")){
+        if(resp12.equals("L") && resp22.equals("L")){
+        if(resp22 == resp12)
         System.out.println("EMPATE!!!");
-        System.out.println("Ninguno Gana");
         punto1+=0;
         punto2+=0;
     }
-        if(resp1.equals("T") && resp2.equals("T")){
-        System.out.println("\nEMPATE!!!\n");
-        System.out.println("Ninguno Gana");
+        if(resp12.equals("T") && resp22.equals("T")){
+        if(resp22 == resp12)
+        System.out.println("EMPATE!!!");
         punto1+=0;
         punto2+=0;
     }
-        
-        
-        if(resp1.equals("P") && resp2.equals("L")){
-        System.out.println("\nGANADOR La Máquina!!!\n");
-        System.out.println("Gana 1 punto");
-        punto1+=1;
-    }
-       if(resp1.equals("P") && resp2.equals("T")){
-        System.out.println("\nGANADOR Jugador 2!!!\n" + jugador2);
+        if(resp12.equals("P") && resp22.equals("L")){
+        System.out.println("GANADOR La Máquina!!!");
         System.out.println( "Gana 1 punto");
-        punto2+=1;
+        punto1+=1;
     }
-    
-       
-       if(resp1.equals("L") && resp2.equals("P")){
-        System.out.println("\nGANADOR Jugador 2!!!\n" + jugador2);
+       if(resp12.equals("P") && resp22.equals("T")){
+        System.out.println("GANADOR Jugador 2!!!" + jugador2);
         System.out.println("Gana 1 punto");
         punto2+=1;
     }
-       if(resp1.equals("L") && resp2.equals("T")){
-        System.out.println("\nGANADOR La Máquina!!!\n");
+        if(resp12.equals("L") && resp22.equals("P")){
+        System.out.println("GANADOR Jugador 2!!!" + jugador2);
+        System.out.println("Gana 1 punto");
+        punto2+=1;
+    }
+       if(resp12.equals("L") && resp22.equals("T")){
+        System.out.println("GANADOR La Máquina!!!");
         System.out.println("Gana 1 punto");
         punto1+=1;
         
     }
-     
-       
-       if(resp1.equals("T") && resp2.equals("L")){
-        System.out.println("\nGANADOR Jugador 2!!!\n" + jugador2);
+        if(resp12.equals("T") && resp22.equals("L")){
+        System.out.println("GANADOR Jugador 2!!!" + jugador2);
         System.out.println("Gana 1 punto");
         punto2+=1;
     }
-       if(resp1.equals("T") && resp2.equals("P")){
-        System.out.println("\nGANADOR La Máquina!!!\n");
+       if(resp12.equals("T") && resp22.equals("P")){
+        System.out.println("GANADOR La Máquina!!!");
         System.out.println("Gana 1 punto");
         punto1+=1;
     }
-     
-       if(punto1<punto2){
+        
+        if(punto1<punto2){
             System.out.println("------------------------------------");
             System.out.println("El ganador es el Jugador 2 : " +jugador2);
-        }else {
+        }else if(punto1>punto2){
             System.out.println("------------------------------------");
-            System.out.println("El ganador es la Maquina");
+            System.out.println("El ganador es el Jugador 1 : " +jugador1);
+        }else if(resp22 == resp12){
+            System.out.println("EMPATE: Ninguno Gana" +jugador2 +jugador1);
         }
-        
+    
         System.out.println("------------------------------------");
         System.out.println("-------------La P es Piedra---------");
         System.out.println("-------------La L es Papel----------");
         System.out.println("-------------La T es Tijera---------");
         System.out.println("------------------------------------");
        
-        //JUGADA 3
-        System.out.print("\nIntroducir la opcion P/L/T: \n" + jugador2);
+       //Pedir al jugador que ingrese la opcion - JUGADA 3
+        System.out.print("\nIntroducir la opcion P/L/T : \n" );
         resp13 = leer.next();
         
         //convertir los numeros en letras} 
+        
         switch(numerorandom){
             
             case 0:resp23="P";
@@ -249,75 +240,70 @@ public class Ej12JuegoPiedraPTBart {
             case 2:resp23="T";
                 break;
         }
-        
-        //JUGADA MAQUINA 3
-        System.out.println("\nLa Opcion de La Maquina fue :\n" +resp23);
-        
+        //JUGADA MAQUINA 1
+         System.out.println("\nLa Opcion de La Maquina fue :\n" +resp23);
+                 
+         
         //logica del juego- Jugada 3
-        if(resp1.equals("P") && resp2.equals("P")){
-        System.out.println("\nEMPATE!!!\n" );
-        System.out.println("Ninguno Gana");
+        if(resp13.equals("P") && resp23.equals("P")){
+        if(resp23 == resp13)
+        System.out.println("EMPATE!!!" );
         punto1+=0;
         punto2+=0;
     }
-        if(resp1.equals("L") && resp2.equals("L")){
+        if(resp13.equals("L") && resp23.equals("L")){
+        if(resp23 == resp13)
         System.out.println("EMPATE!!!");
-        System.out.println("Ninguno Gana");
         punto1+=0;
         punto2+=0;
     }
-        if(resp1.equals("T") && resp2.equals("T")){
-        System.out.println("\nEMPATE!!!\n");
-        System.out.println("Ninguno Gana");
+        if(resp13.equals("T") && resp23.equals("T")){
+        if(resp23 == resp13)
+        System.out.println("EMPATE!!!");
         punto1+=0;
         punto2+=0;
     }
-        
-        
-        if(resp1.equals("P") && resp2.equals("L")){
-        System.out.println("\nGANADOR La Máquina!!!\n");
+        if(resp13.equals("P") && resp23.equals("L")){
+        System.out.println("GANADOR La Máquina!!!");
         System.out.println("Gana 1 punto");
         punto1+=1;
     }
-       if(resp1.equals("P") && resp2.equals("T")){
-        System.out.println("\nGANADOR Jugador 2!!!\n" + jugador2);
+       if(resp13.equals("P") && resp23.equals("T")){
+        System.out.println("GANADOR Jugador 2!!!" + jugador2);
         System.out.println("Gana 1 punto");
         punto2+=1;
     }
-    
-       
-       if(resp1.equals("L") && resp2.equals("P")){
-        System.out.println("\nGANADOR Jugador 2!!!\n" + jugador2);
+        if(resp13.equals("L") && resp23.equals("P")){
+        System.out.println("GANADOR Jugador 2!!!" + jugador2);
         System.out.println("Gana 1 punto");
         punto2+=1;
     }
-       if(resp1.equals("L") && resp2.equals("T")){
-        System.out.println("\nGANADOR La Máquina!!!\n");
+       if(resp13.equals("L") && resp23.equals("T")){
+        System.out.println("GANADOR La Máquina!!!");
         System.out.println("Gana 1 punto");
         punto1+=1;
         
     }
-     
-       
-       if(resp1.equals("T") && resp2.equals("L")){
-        System.out.println("\nGANADOR Jugador 2!!!\n" + jugador2);
+        if(resp13.equals("T") && resp23.equals("L")){
+        System.out.println("GANADOR Jugador 2!!!" + jugador2);
         System.out.println("Gana 1 punto");
         punto2+=1;
     }
-       if(resp1.equals("T") && resp2.equals("P")){
-        System.out.println("\nGANADOR La Máquina!!!\n");
+       if(resp13.equals("T") && resp23.equals("P")){
+        System.out.println("GANADOR La Máquina!!!");
         System.out.println("Gana 1 punto");
         punto1+=1;
-     }   
+    }
         
         if(punto1<punto2){
             System.out.println("------------------------------------");
             System.out.println("El ganador es el Jugador 2 : " +jugador2);
-        }else {
+        }else if(punto1>punto2){
             System.out.println("------------------------------------");
-            System.out.println("El ganador es la Maquina");
+            System.out.println("El ganador es el Jugador 1 : " +jugador1);
+        }else if(resp23 == resp13){
+            System.out.println("EMPATE: Ninguno Gana" +jugador2 +jugador1);
         }
-    
      
         System.out.println("------------------------------------");
         System.out.println("               PARTIDAS 3           ");
@@ -328,7 +314,7 @@ public class Ej12JuegoPiedraPTBart {
       
         if(punto1<punto2){
             System.out.println("------------------------------------");
-            System.out.println("El ganador es el Jugador 2 : " +jugador2+ "Es el Ganador de todas las Partidas");
+            System.out.println("\"El ganador de todas las Partidas es: " +jugador2);
         }else {
             System.out.println("------------------------------------");
             System.out.println("El ganador de todas las Partidas es: la Maquina");
