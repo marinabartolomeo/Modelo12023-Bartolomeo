@@ -11,19 +11,20 @@ public class Ejclase2106 {
     public static void main(String[] args) {
         
         int operacion = 0;
-        int suma = 0;
-        int resta = 0;
-        int mult =0;
+             
+        ImageIcon logo = new ImageIcon("src/imagen/operaciones.png");
+        ImageIcon logo1 = new ImageIcon("src/imagen/operaciones2.png");
         
+         JOptionPane.showMessageDialog(null,
+              "Podra realizar las operaciones con Herencia",
+              "Bienvenidos a Calculin",
+              JOptionPane.INFORMATION_MESSAGE, logo);
         
-        ImageIcon logo = new ImageIcon("src/imagenes/logo.png");
-        
-        
-            operacion = JOptionPane.showOptionDialog(null,
-             "Podra realizar elegir una operacion de Herencia",
+          operacion = JOptionPane.showOptionDialog(null,
+             "Elija la Operacion que quiera Realizar",
               "Bienvenidos a Calculin",
              JOptionPane.YES_NO_CANCEL_OPTION,
-             JOptionPane.QUESTION_MESSAGE,logo,
+             JOptionPane.QUESTION_MESSAGE,logo1,
              new Object[]{"Suma","Resta","Multiplicacion"},null)+1;
         
             if(operacion ==1){
@@ -48,42 +49,7 @@ public class Ejclase2106 {
                     
             
        }
-        
-      /* switch(operaciones){
-            case 0: ChijaSuma msjs = new ChijaSuma();
-                    msjs.PedirDatos();
-                    msjs.Suma();
-                    msjs.MostrarResultados();
-                    break;
-                    
-            case 1: ChijaResta msjr = new ChijaResta();
-                    msjr.PedirDatos();
-                    msjr.Resta();
-                    msjr.MostrarResultados();
-                    break;
-            
-            case 2: ChijaMult msjm = new ChijaMult();
-                    msjm.PedirDatos();
-                    msjm.Mult();
-                    msjm.MostrarResultados();
-                    break;
-            default:
-       }*/
-        ChijaSuma msjs = new ChijaSuma();
-        msjs.PedirDatos();
-        msjs.Suma();
-        msjs.MostrarResultados();
-        
-        ChijaResta msjr = new ChijaResta();
-        msjr.PedirDatos();
-        msjr.Resta();
-        msjr.MostrarResultados();
-        
-        ChijaMult msjm = new ChijaMult();
-        msjm.PedirDatos();
-        msjm.Mult();
-        msjm.MostrarResultados();
-        
+     
          
         }
         
