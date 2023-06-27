@@ -43,9 +43,9 @@ public class Stecnico {
               "BATERIA",
              JOptionPane.YES_NO_CANCEL_OPTION,
              JOptionPane.QUESTION_MESSAGE,logo1,
-             new Object[]{"3000ma 5hs","4000ma 9hs","7000ma 12hs"},"");
+             new Object[]{"3000ma 5hs","4000ma 9hs","7000ma 12hs"},"3000ma 5hs");
    
-    
+   
     String v5 = (String) JOptionPane.showInputDialog(null, 
               "Escriba brevemente el Desperfecto: ",
               "DESPERFECTO",
@@ -53,8 +53,9 @@ public class Stecnico {
               null,
               null,
               "");
+             
     }
-       
+      
     //metodo para mostrar datos
     public void imprimir() {
        
@@ -65,8 +66,7 @@ public class Stecnico {
             JOptionPane.QUESTION_MESSAGE,logo1,
             new Object[]{"IMPRIMIR REGISTRO"},"imprimir");
         
-     }
-    
+     }    
 }
     
  

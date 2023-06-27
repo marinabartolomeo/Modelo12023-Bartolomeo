@@ -4,14 +4,13 @@ package Stecnico;
 import Servicios.Stecnico;
 import java.util.Scanner;
 
-
 public class Celular extends Stecnico{
-  
+    
     Scanner leer = new Scanner(System.in);
+
     
 public void setCelular(String Celular) {
-        this.Celular = Celular;
-
+       
             System.out.println("--------------------------------------------");
             System.out.println("-----------REGISTRO del CELULAR-------------");
             System.out.println("--------------------------------------------");
@@ -29,7 +28,9 @@ public void setCelular(String Celular) {
             System.out.println("--------------------------------------------");
             System.out.println("DESPERFECTO :" + defecto);
             defecto=leer.nextLine();
-      }   
-    
-}     
+            
+           
+    }
+     }
+         
            
