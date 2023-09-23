@@ -1,0 +1,36 @@
+CONSOLA DDL:
+
+
+CREATE TABLE IF NOT EXISTS`ALUMNOS`(`ID`int(2),`Dni` int(8),`Nombre`varchar(20),`Apellido` varchar(20),`Telefono` varchar(11),PRIMARY KEY(`id`));
+
+  INSERT INTO `Alumnos`(`id`,`Dni`,`Nombre`,`Apellido`,`Telefono`) VALUES 
+  ('1','24777229','Marina','Bartolomeo','1158943494'),
+  ('2','12315614','Susana','Garcia','1164943491'),
+  ('3','11216987','Claudia','Basquez','1133942222'),
+  ('4','24666279','Gustavo','Gonzales','1123231547'),
+  ('5','20544899','Cristian','Bortolo','1122556715'),
+  ('6','18322444','Jose','Garcia','1193546677'),
+  ('7','10215978','Ignacio','Bermudez','1154787777'),
+  ('8','16789247','Lorena','Pardo','1167678955'),
+  ('9','24987563','Marcela','Crimi','1134668795'),
+  ('10','26841123','Fabiana','Agostini','1155662214');
+  
+  
+  CREATE TABLE IF NOT EXISTS`NOTAS`(`idAlumnos` int(2),`idNotas`int(8),`Notas`varchar(20),PRIMARY KEY(`idAlumnos`));
+
+  INSERT INTO `NOTAS`(`idAlumnos`,`idNotas`,`Notas`) VALUES 
+  ('1',8,'Aprobado'),
+  ('2',2,'Desaprobado'),
+  ('3',5,'Desaprobado'),
+  ('4',9,'Aprobado'),
+  ('5',10,'Aprobado'),
+  ('6',6,'Aprobado'),
+  ('7',1,'Desaprobado'),
+  ('8',4,'Desprobado'),
+  ('9',7,'Aprobado'),
+  ('10',10,'Aprobado');
+-------------------------------------------------------------------------
+
+CONSOLA DML:
+
+Select Dni,Nombre,Apellido,Telefono,Notas from Alumnos, Notas where id=idAlumnos;
