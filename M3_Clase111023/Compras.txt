@@ -1,0 +1,31 @@
+CREATE table `Compras` (`ID` int (5),`Productos` varchar(40),`Precio` int(10),`Cuit` int(13),`Cantidad` int (10));
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00001','Manteca Vacalin x5kg Pilon','13250','23-16899224-3','100');
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00002','Queso Crema Casancrem Sachet x4kg','5007','23-16899224-3','200');
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00003','Crema de Leche Milkaut Balde x5L','5898','23-16899224-3','150');
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00004','Dulce de Leche Repostero Vacalin Cuñeta x10kg','10303','23-16899224-3','50');
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`)
+VALUES ('00006','Esencia de Vainilla Lesansi Bidon x2L','2500','23-16899224-3','20u');
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00007','Esencia de Naranja Emeth Bidon x2L','1450','23-16899224-3','50');
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00008','Esencia de Pan Dulce Emeth Bidon x2L','2850','23-16899224-3','150');
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00009','Almendras Carmel x5kg','5007','20-21816444-4','300'); 
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00027','Harina de Trigo 0000 Chacabuco Bolsa x25kg','8612','21-18699354-2','500');
+
+INSERT INTO`Compras`(`ID`,`Productos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00028','Harina de Trigo 000 Cañuelas Bolsa x25kg','3708','21-1869935-2','500');                                        

@@ -1,0 +1,46 @@
+CREATE table `Ventas` (`Fecha` int(8),`Cuit` int(13),`Nombre` varchar(30), `Apellido` varchar(30),`ID` int(5),`Productos` varchar(30),`Precio` int(6),`Cantidad` int(6));
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) VALUES
+('05/09/23','23-24777229-4','Marina','Bartolomeo','00026','Harina de Trigo 0000 Cañuelas Bolsa x25kg','7.873','2');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('10/09/23','20-12315614-3','Susana','Garcia','00019','Azucar Rubia Proin x1kg','1.150','5');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('15/09/23','21-11216987-2','Claudia','Basquez','00013','Pasas de Uva','5.007','1');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`)
+VALUES ('17/09/23','23-24666279-3','Gustavo','Gonzales','00004','Dulce de Leche Repostero Vacalin Cuñeta x10kg','10.303','5');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('20/09/23','20-20544899-6','Cristian','Bortolo','00001','Manteca Vacalin x5kg Pilon','13.250','10');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('12/09/23','23-24777229-4', 'Marina','Bartolomeo','00026','Harina de Trigo 0000 Cañuelas Bolsa x25kg','7.873','3');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('13/09/23','20-12315614-3','Susana','Garcia','00019','Azucar Rubia Proin x1kg','1.150','5');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('19/09/23','21-11216987-2','Claudia','Basquez','00013','Pasas de Uva','5.007','5');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('21/09/23','23-24666279-3','Gustavo','Gonzales','00004','Dulce de Leche Repostero Vacalin Cuñetax 10kg','10.303','10');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('25/09/23','20-20544899-6','Cristian','Bortolo','00001','Manteca Vacalin x 5kg Pilon','13.250','5');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) VALUES
+('18/09/23','23-24777229-4', 'Marina','Bartolomeo','00026','Harina de Trigo 0000 Cañuelas Bolsa x25kg','7.873','10');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('11/09/23','20-12315614-3','Susana','Garcia','00019','Azucar Rubia Proin x1kg','1.150','20');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('23/09/23','21-11216987-2','Claudia','Basquez','00013','Pasas de Uva','5.007','5');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('27/09/23','23-24666279-3','Gustavo','Gonzales','00004','Dulce de Leche Repostero Vacalin Cuñeta x10kg','10.303','10');
+
+INSERT INTO `Ventas`(`Fecha`,`Cuit`,`Nombre`,`Apellido`,`ID`,`Productos`,`Precio`,`Cantidad`) 
+VALUES ('29/09/23','20-20544899-6','Cristian','Bortolo','00001','Manteca Vacalin x5kg Pilon','13.250','5');

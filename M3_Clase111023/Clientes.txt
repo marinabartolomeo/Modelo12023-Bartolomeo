@@ -1,0 +1,30 @@
+
+CREATE table `Clientes` (`ID` int (4),`Cuit` int (13), `Nombre` varchar(30), `Apellido` varchar(30),`Direccion` varchar(30), `Fecha_Nac` int (10));
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`)
+VALUES ('0001','23-24777229-4', 'Marina','Bartolomeo','Almafuerte 83','21/08/1975');
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`)
+VALUES ('0002','20-12315614-3','Susana','Garcia','Pagola 110','02/04/1980');
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`)
+VALUES ('0003','21-11216987-2','Claudia','Basquez','Uspallata 23','30/12/1990');
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`) 
+VALUES ('0005','20-20544899-6','Cristian','Bortolo','Av. Saenz 55','14/01/1976');
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`) 
+VALUES ('0006','20-18322444-7','Jose','Garcia','Av. La Plata 1500','16/06/1985');
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`)
+VALUES ('0007','23-10215978-9','Ignacio','Bermudez','Av. Caseros','22/03/2000');
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`) 
+VALUES ('0008','20-16789247-6','Lorena','Pardo','Av. Caseros 700','05/12/1999');
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`)
+VALUES ('0009','21-24987563-4','Marcela','Crimi','Av. Almafuerte 300','11/11/1989');
+
+INSERT INTO `Clientes`(`ID`,`Cuit`,`Nombre`,`Apellido`,`Direccion`,`Fecha_Nac`) 
+VALUES ('0010','20-12988863-9','Mariano','Acosta','Av. Chiclana 700','27/12/1994');                                     
+ 

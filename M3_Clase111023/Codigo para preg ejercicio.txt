@@ -1,0 +1,33 @@
+consultar que produto fue el mas comprado
+SELECT Productos, SUM(Cantidad) AS TotalVendido
+from Ventas
+GROUP by Productos
+order By TotalVendido DESC;
+
+
+consultar que compro Marina Bartolomeo
+SELECT DISTINCT Productos
+FROM Ventas
+WHERE Nombre = 'Marina' AND Apellido = 'Bartolomeo';
+
+
+consultar que produtos nos provee Distribuidora Patricios, cuit 21-18699354-2
+SELECT Articulos
+FROM Stock
+WHERE Cuit = '21-18699354-2';
+
+
+consultar que produto es el mas caro
+SELECT Articulos, Precio
+from Stock
+WHERE Precio = (SELECT MAX(Precio) FROM Stock);
+
+
+contar la cantidad de Articulos
+SELECT COUNT(Articulos) AS CantidadDeArticulos
+FROM Stock;
+
+
+Sumar los precios de todos los productos(función SUM)
+SELECT SUM (Precio) AS TotalDePrecios
+FROM Stock;

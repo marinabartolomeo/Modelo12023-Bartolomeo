@@ -1,0 +1,93 @@
+CREATE TABLE `Stock` (`ID` int (5),`Articulos` varchar(30),`Precio` int(8),`Cuit` int (13),`Cantidad` int (6));
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00001','Manteca Vacalin x5kg Pilon','13.250','23-16899224-3','300');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00002','Queso Crema Casancrem Sachet x4kg','5.007','23-16899224-3','400');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00003','Crema de Leche Milkaut Balde x5L','58.988','23-16899224-3','100');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00004','Dulce de Leche Repostero Vacalin Cuñeta x10kg','10.303','23-16899224-3','500');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00005','Mix de Frutos Rojos Fresh Strawbwrrys Bolsa x1kg','3.430','23-16899224-3','100');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00006','Esencia de Vainilla Lesansi Bidon x2L','2.500','23-16899224-3','200');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00007','Esencia de Naranja Emeth Bidon x2L','1.450','23-16899224-3','50');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00008','Esencia de Pan Dulce Emeth Bidon x2L','2.850','23-16899224-3','100');   
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES('00009','Almendras Carmel x5kg','5.007','20-21816444-4','1000');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00010','Castañas de Cajú x1kg','5.007','20-21816444-4','1000');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00011','Nueces Mariposa Criolla x1kg','5.007','20-21816444-4','800');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00012','Nueces Mariposa Especial Extra Light','5.007','20-21816444-4','1000');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00013','Pasas de Uva','5.007','20-21816444-4','500');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00014','Dulce de Membrillo Cayfar x5kg','5.007','20-21816444-4','400');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00015','Dulce de Batata Cayfar x5kg','5.007','20-21816444-4','250');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00016','Avellana Pelada x1kg','8.600','20-26288112-4','100');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00017','Azucar Impalpable Proin x1kg','1.200','20-26288112-4','300');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00018','Azucar Negra Proin x1kg','1.550','20-26288112-4','300');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00019','Azucar Rubia Proin x1kg','1.150','20-26288112-4','500');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00020','Baño de Chocolate Chocolart Moldeo Leche x1kg','3.050','20-26288112-4','1000');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00021','Dulce de Batata Cayfar x5kg','4.020','20-22646551-4','300'); 
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00022','Dulce de Membrillo Cayfar x5kg','5.855','20-22646551-4','300'); 
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00023','Barra de queso Tybo x5kg','2.335','20-22646551-4','100');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00024','Barra de queso Danbo x5kg','2.295','20-22646551-4','80');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00025','Jamon Cocido de Pata de Cerdo x5kg','2.590','20-22646551-4','100');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00026','Harina de Trigo 0000 Cañuelas Bolsa x25kg','7.873','21-18699354-2','300');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00027','Harina de Trigo 0000 Chacabuco Bolsa x25kg','8.612','21-18699354-2','300');
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00028','Harina de Trigo 000 Cañuelas Bolsa x25kg','3.708','Harinera Patricios','300'); 
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00029','Harina de Trigo 000 Chacabuco Bolsa x25kg','6.906','21-18699354-2','300'); 
+
+INSERT INTO `Stock`(`ID`,`Articulos`,`Precio`,`Cuit`,`Cantidad`) 
+VALUES ('00030','Polvo de Hornear Lesani Bolsa x2kg','3.163','21-18699354-2','50');   
+                                       
+ 

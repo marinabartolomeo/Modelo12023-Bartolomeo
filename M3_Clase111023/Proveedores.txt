@@ -1,0 +1,16 @@
+CREATE table `Proveedores`(`ID` int (3),`Cuit` int (13),`Nombre` varchar(30),`Direccion` varchar(30), `Telefono` int (15));
+
+INSERT INTO `Proveedores`(`ID`,`Cuit`,`Nombre`,`Direccion`,`Telefono`) 
+VALUES ('001','20-21816444-4','MarJuanC Alimentos','Grito de Asencio 3632 - CABA','11-3758-0195');
+
+INSERT INTO `Proveedores`(`ID`,`Cuit`,`Nombre`,`Direccion`,`Telefono`) 
+VALUES ('002','23-16899224-3','Mayorista Net','Av. Bernardo Ader 2754- B1605 Munro- Bs As','11-3354-1442');
+
+INSERT INTO `Proveedores`(`ID`,`Cuit`,`Nombre`,`Direccion`,`Telefono`) 
+VALUES ('003','20-26288112-4','Sapore','AV. Chivilcoy 4795- Villa Devoto- CABA','11-4502-1578');
+
+INSERT INTO `Proveedores`(`ID`,`Cuit`,`Nombre`,`Direccion`,`Telefono`) 
+VALUES ('004','21-18699354-2','Distribuidora Patricios','Pomar Gregorio Tte 3906, CABA',' 011 4911-2323');
+
+INSERT INTO `Proveedores`(`ID`,`Cuit`,`Nombre`,`Direccion`,`Telefono`) 
+VALUES ('005','20-22646551-4','Lacteos Paz','Bermudez 1299, Caba','11-3378-2383');
