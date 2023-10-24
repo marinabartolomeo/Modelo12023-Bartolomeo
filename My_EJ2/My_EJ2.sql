@@ -1,0 +1,1 @@
+SELECT * FROM ej2_transporte.camioneros;
