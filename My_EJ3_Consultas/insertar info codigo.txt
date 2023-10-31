@@ -1,0 +1,45 @@
+Cree las tablas: 
+create table socios(
+documento char(8) not null,
+nombre varchar(30),
+domicilio varchar(30),
+primary key(documento)
+);
+
+create table inscriptos(
+documento char(8) not null,
+deporte varchar(15) not null,
+año year,
+matricula char(1), /*si esta paga ='s' sino 'n'*/
+primary key(documento,deporte,año)
+);
+
+
+use CLUBDeportivo;
+INSERT INTO Socios (`idDNI`, `Nombre`, `Direccion`) VALUES
+('22333444','Juan Perez','Colon 234');
+INSERT INTO Socios (`idDNI`, `Nombre`, `Direccion`) VALUES
+('23333444','Maria Lopez','Sarmiento 465');
+INSERT INTO Socios (`idDNI`, `Nombre`, `Direccion`) VALUES
+('24333444','Antonio Juarez','Caseros 980');
+INSERT INTO Socios (`idDNI`, `Nombre`, `Direccion`) VALUES
+('25333444','Marcelo Pereyra','Sucre 349');
+
+
+use CLUBDeportivo;
+INSERT INTO Inscriptos (`idDNI`, `Deporte`, `Año`,`Matricula`) VALUES
+('22333444','natacion','2015','s');
+INSERT INTO Inscriptos (`idDNI`, `Deporte`, `Año`,`Matricula`) VALUES
+('22333444','natacion','2016','n'),
+INSERT INTO Inscriptos (`idDNI`, `Deporte`, `Año`,`Matricula`) VALUES
+('23333444','natacion','2015','s');
+INSERT INTO Inscriptos (`idDNI`, `Deporte`, `Año`,`Matricula`) VALUES
+('23333444','tenis','2016','s');
+INSERT INTO Inscriptos (`idDNI`, `Deporte`, `Año`,`Matricula`) VALUES
+('23333444','natacion','2016','s');
+INSERT INTO Inscriptos (`idDNI`, `Deporte`, `Año`,`Matricula`) VALUES
+('24333444','tenis','2016','n');
+INSERT INTO Inscriptos (`idDNI`, `Deporte`, `Año`,`Matricula`) VALUES
+('24333444','basquet','2016','n'), 
+INSERT INTO Inscriptos (`idDNI`, `Deporte`, `Año`,`Matricula`) VALUES
+('26333444','futbol','2017','s');
