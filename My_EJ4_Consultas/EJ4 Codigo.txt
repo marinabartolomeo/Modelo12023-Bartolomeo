@@ -1,0 +1,36 @@
+EJ4_CLUB
+
+1- Cree las tablas:
+ create table deportes(
+codigo tinyint identity,
+nombre varchar(30),
+profesor varchar(30),
+primary key (codigo)
+);
+ create table inscriptos(
+documento char(8),
+codigodeporte tinyint not null,
+matricula char(1) --'s'=paga 'n'=impaga
+);
+
+
+use EJ4CLUB;
+
+INSERT INTO deportes (`idCodigo`, `Nombre`, `Profesor`) VALUES
+('tenis','Marcelo', 'Roca'),
+('natacion','Marta', 'Torres'),
+('basquet','Luis', 'Garcia'), 
+('futbol','Marcelo', 'Roca');
+
+
+use EJ4CLUB;
+INSERT INTO inscriptos (`idDNI`, `Deporte`, `Matricula`) VALUES
+('22222222',3,'s'),
+('23333333',3,'s'),
+('24444444',3,'n'),
+('22222222',2,'s'),
+('23333333',2,'s'),
+('22222222',4,'n'),
+('22222222',5,'n');
+
+  
