@@ -1,0 +1,5 @@
+INSERT INTO `personas` (`IdDato`, `Nombre`, `Apellido`, `Telefono`) VALUES
+(1, 'Juan', 'Falabrino', '1134308195'),
+(2, 'Jose', 'Ramirez', '435325'),
+(3, 'Fabian', 'Castro', '21321121'),
+(4, 'Pedro', 'Perez', '1122332');
