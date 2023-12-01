@@ -1,0 +1,41 @@
+
+Base de datos: `Banco Marina` / EJ_TP_Final
+
+
+Estructura de tabla para la tabla `segurovida`
+
+
+
+CREATE TABLE `segurovida` (`IdDato` int(11) NOT NULL,
+  `Cuit` int(9) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `Muerte` varchar(2) DEFAULT NULL,
+  `MuerteAccidental` varchar(2) DEFAULT NULL,
+  `DiasDeInternacion` int(9) NOT NULL,
+  `ParalisisTotalParcial` varchar(10) DEFAULT NULL,
+  `Beneficiario1` varchar(50) DEFAULT NULL,
+  `Porcentaje1` int(20) NOT NULL,
+  `Beneficiario2` varchar(50) DEFAULT NULL,
+  `Porcentaje2` int(20) NOT NULL,
+  `Beneficiario3` varchar(50) DEFAULT NULL,
+  `Porcentaje3` int(20) NOT NULL,
+  `Beneficiario4` varchar(50) DEFAULT NULL,
+  `Porcentaje4` int(20) NOT NULL
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+-----INFO------
+
+
+INSERT INTO `segurovida` (`IdDato`, `Cuit`, `Nombre`, `Apellido`, `Muerte`, `MuerteAccidental`, `DiasDeInternacion`,`ParalisisTotalParcial`,`Beneficiario1`, `Porcentaje1`, `Beneficiario2`, `Porcentaje2`, `Beneficiario3`, `Porcentaje3`, `Beneficiario4`, `Porcentaje4`) VALUES
+('1', '20283332224', 'Juan', 'Gonzalez', 'SI', 'SI', '0', 'NO', 'Susana Gomes', '100', 'NO', '0', 'NO', '0', 'NO', '0'),
+('2', '23361234482', 'Clara', 'Kippes', 'SI', 'SI', '60', 'Total', 'Clara Ramirez', '50', 'Esteban Kippes', '50', 'NO', '0', 'NO', '0'),
+('3', '20415542667', 'Victor', 'Pinto', 'SI', 'NO', '0', 'NO', 'Gonzalo Pinto', '25', 'Maria Pinto', '25', 'Gustavo Pinto', '25', 'Lorena Pinto', '25'),
+('4', '27351730930', 'Nuria', 'Nardelli', 'SI', 'SI', '30', 'Total', 'Agustina Cordoba', '100', 'NO', '0', 'NO', '0', 'NO', '0'),
+('5', '27312328149', 'Melisa', 'Manzano', 'SI', 'SI', '120', 'Parcial', 'Jorge Basquez', '100', 'NO', '0', 'NO', '0', 'NO', '0'),
+('6', '20378964289', 'Alan', 'Cabrera', 'SI', 'SI', '60', 'Total', 'Soledad Costa', '50', 'Micaela Cabrera', '50', 'NO', '0', 'NO', '0'),
+('7', '20188496300', 'Wilfredo', 'Erico', 'SI', 'SI', '30', 'Parcial', 'Agustin Castro', '10', 'No', '0', 'NO', '0', 'NO', '0');
+
+

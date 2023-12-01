@@ -1,0 +1,45 @@
+
+ Base de datos: `Banco Marina` / EJ_TP_Final2
+
+
+
+ Estructura de tabla para la tabla `usuarios`
+
+
+
+CREATE TABLE `usuarios` (`IdDato` int(11) NOT NULL,
+  `Cuit` varchar(10) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `Tipo Usuario` varchar(50) DEFAULT NULL,
+  `Usuario` varchar(25) DEFAULT NULL,
+  `Contraseña` varchar(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+
+-- INFO--
+
+
+
+INSERT INTO `usuarios` (`IdDato`,`Cuit`, `Nombre`, `Apellido`, `Tipo Usuario`,`Usuario`,`Contraseña`) VALUES
+('1','20283332224', 'Juan', 'Gonzalez', 'Cliente', 'juangonzalez', 'Cli123'),
+('2','23361234483', 'Clara', 'Kippes', 'Cliente', 'clarakippes', 'Cli456'),
+('3','23309437179', 'Sergio', 'Ramirez', 'Cliente', 'sergioramirez', 'Cli789'),
+('4','20415542667', 'Victor', 'Pinto', 'Cliente', 'victorpinto', 'Cli111'),
+('5','27258799580', 'Maria', 'Rodriguez', 'Cliente', 'mariarodriguez', 'Cli222'),
+('6','27351730930', 'Nuria', 'Nardelli', 'Cliente', 'nurianardelli', 'Cli333'),
+('7','20237499280', 'Enrique', 'Mamani', 'Cliente', 'enriquemamani', 'Cli444'),
+('8','27312328149', 'Melisa', 'Manzano', 'Cliente', 'melisamanzano', 'Cli555'),
+('9','20378964289', 'Alan', 'Cabrera', 'Cliente', 'alancabrera', 'Cli666'),
+('10', '20188496300', 'Wilfredo', 'Erico', 'Cliente', 'wilfredoerico', 'Cli777'),
+('11', '20206620553', 'Gonzalo', 'Duda', 'Ventas', 'wilfredoerico', 'ven111'),
+('12', '27341802747', 'Clara', 'Ramirez', 'Ventas', 'wilfredoerico', 'ven222'),
+('13', '20365155896', 'Cesar', 'Fuentes', 'Ventas', 'wilfredoerico', 'ven333'),
+('14', '23301745494', 'Maria', 'Cardenas', 'Ventas', 'wilfredoerico', 'ven444'),
+('15', '20359240121', 'Agustin', 'Torres', 'Ventas', 'wilfredoerico', 'ven555'),
+('16', '20386542132', 'Mariano', 'Pardo', 'Ventas', 'wilfredoerico', 'ven666'),
+('17', '22248985443', 'Javier', 'Palomo', 'Admin', 'javierpalomo', 'adm9999'),
+('18','27380620605', 'Rebeca', 'Chaves', 'Admin', 'javierpalomo', 'adm9998'),
+('19','20248571218', 'Claudio', 'Oviedo', 'Admin', 'javierpalomo', 'adm9997');

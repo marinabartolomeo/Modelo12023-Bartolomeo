@@ -1,0 +1,251 @@
+Ejercicio Final 
+Creación de una base de datos para una Banco. Con las siguientes tablas:
+- Clientes
+- Admin.
+- Usuarios
+
+- Vendedores
+- Servicios
+- Prestamos
+- Seguro Vida
+- Seguro Hogar
+- Seguro Auto
+- Clientes
+
+--------------------------------------------------------------------------------------------------------------------------------------
+* Consultas:
+
+
+1-  Dar de alta clientes
+
+Tabla Clientes:
+
+Codigo:
+
+INSERT INTO `clientes` (`IdDato`, `Cuit`, `Nombre`, `Apellido`, `Fecha Nac.`, `Genero`, `Estado Civil`,`Hijos`, `Domicilio`, `Localidad`, `Provincia`, `Telefono`, `e-mail`, `Cod. Vendedor`) VALUES
+('11', '232544412433', 'Jazmin', 'Campos', '09031999', 'Femenino', 'Casada', '0', 'Av. Chiclana 2001', 'Nueva Pompeya', 'Ciudad Autonoma de Bs. As.', '1166224899', 'jazmincampos@gmail.com', '0123');
+
+
+
+2- Buscar cliente en la base:
+Código:
+SELECT * 
+FROM clientes 
+WHERE IdDato = 7;
+
+
+
+y modificarlo:
+Código:
+  UPDATE clientes SET 
+  Nombre = 'Enrique Jose',
+  Telefono = '1125260001'
+  WHERE IdDato = 7;
+
+
+
+3- Buscar cliente en la base: 
+Código:
+SELECT * 
+FROM clientes 
+WHERE IdDato = 11;
+
+y eliminarlo:
+Código:
+DELETE FROM `clientes`
+WHERE IDdato = 11;
+4- Cargar un seguro a un cliente determinado en la base: 
+
+Tabla Servicios:
+
+Buscamos al cliente
+
+Código:
+SELECT * 
+FROM `servicios` 
+WHERE IdDato = 4;
+
+Cargamos seguro para el auto:
+
+Código:
+
+INSERT INTO `seguroauto` (`IdDato`, `Cuit`, `Nombre`, `Apellido`, `Dominio`, `Marca`, `Modelo`, `Franquicia`, `TercerosCompleto`, `RespCivil`, `TodoRiesgoCF`, `TodoRiesgoSF`, `Granizo`) VALUES
+('7','2147483647', 'Victor', 'Pinto', 'ZYX997', 'Ford', 'Focus', 'NO', 'SI', 'SI', '0', 'NO', 'SI');
+
+
+
+Modificamos la tabla servicios:
+Código:
+UPDATE servicios SET 
+SeguroAuto = 'SI'
+WHERE IdDato = 4;
+
+
+5- Agregar un seguro al mismo cliente: 
+
+    Seguro de Hogar:
+
+
+
+Codigo:
+
+INSERT INTO `segurohogar` (`IdDato`, `Cuit`, `Nombre`, `Apellido`, `Incendio`, `Robo`, `Inundacion`, `Heladera`, `Lavarropas`, `Cocina`, `Notebook`, `CantidadNotebook`, `CosolaGames`, `Televisor`, `CantidadTelevisor`) VALUES
+('7', '20415542667', 'Victor', 'Pinto', 'NO', 'SI', 'NO', 'SI', 'SI', 'SI', 'Si', '1', 'NO', 'SI', '1');
+
+
+
+Modificamos la tabla servicios:
+
+Código:
+UPDATE servicios SET 
+SeguroHogar = 'SI'
+WHERE IdDato = 4;
+
+
+	6- Eliminar un cliente con 3 productos cargados
+
+	Código:
+	DELETE FROM `clientes`
+	WHERE IDdato = 4;
+
+
+
+	7- Buscar en seguros a un cliente y que cargue el seguro que tiene. 
+      Tabla servicios:
+
+
+
+Código:
+SELECT
+c.IdDato,
+    c.Nombre,
+    c.Apellido,
+    sv.Muerte AS SeguroVida_Muerte,
+    sv.MuerteAccidental AS SeguroVida_MuerteAccidental,
+    sv.DiasDeInternacion AS SeguroVida_DiasDeInternacion,
+    sv.ParalisisTotalParcial AS SeguroVida_ParalisisTotalParcial,
+    sv.Beneficiario1 AS SeguroVida_Beneficiario1,
+    sv.Porcentaje1 AS SeguroVida_Porcentaje1,
+    sv.Beneficiario2 AS SeguroVida_Beneficiario2,
+    sv.Porcentaje2 AS SeguroVida_Porcentaje2,
+    sv.Beneficiario3 AS SeguroVida_Beneficiario3,
+    sv.Porcentaje3 AS SeguroVida_Porcentaje3,
+    sv.Beneficiario4 AS SeguroVida_Beneficiario4,
+    sv.Porcentaje4 AS SeguroVida_Porcentaje4,
+    sh.Incendio AS SeguroHogar_Incendio,
+    sh.Robo AS SeguroHogar_Robo,
+    sh.Inundacion AS SeguroHogar_Inundacion,
+    sh.Heladera AS SeguroHogar_Heladera,
+    sh.Lavarropas AS SeguroHogar_Lavarropas,
+    sh.Cocina AS SeguroHogar_Cocina,
+    sh.Notebook AS SeguroHogar_Notebook,
+    sh.Televisor AS SeguroHogar_Televisor,
+    sa.Dominio AS SeguroAuto_Dominio,
+    sa.Franquicia AS SeguroAuto_Franquicia,
+    sa.TercerosCompleto AS SeguroAuto_TercerosCompleto,
+    sa.RespCivil AS SeguroAuto_RespCivil,
+    sa.TodoRiesgoCF AS SeguroAuto_TodoRiesgoCF,
+    sa.TodoRiesgoSF AS SeguroAuto_TodoRiesgoSF,
+    sa.Granizo AS SeguroAuto_Granizo
+    FROM
+     clientes c
+    LEFT JOIN segurovida sv ON c.IdDato = sv.IdDato
+    LEFT JOIN segurohogar sh ON c.IdDato = sh.IdDato
+    LEFT JOIN seguroauto sa ON c.IdDato = sa.IdDato
+    WHERE
+    c.IdDato = 2;
+
+
+
+8- Cambiar por base la contraseña de un usuario y probarla en el sistema la nueva contraseña (query de update para el cambio). 
+
+Tabla Usuarios:
+
+Codigo para cambiar la contraseña:
+
+UPDATE usuarios
+   SET Contraseña = 'Clisr1'
+   WHERE IdDato = 3;
+
+
+9- Dar de baja a un cliente sin productos
+   Tabla Clientes:
+
+Tabla Servicios
+
+   Código para eliminar el cliente:
+   DELETE FROM `clientes`
+       WHERE IDdato = 11;
+        Tabla Clientes:
+
+         
+   Código para eliminar el Servicio:
+        DELETE FROM `Servicios`
+        WHERE IDdato = 11;
+	 Tabla Servicios:
+
+	
+
+10- Enlistar todos los productos de un cliente 
+
+Tabla Servicios:
+Código para el Cliente IdDato 7: 
+
+SELECT
+    c.IdDato,
+    c.Nombre,
+    c.Apellido,
+    sh.Incendio AS SeguroHogar_Incendio,
+    sh.Robo AS SeguroHogar_Robo,
+    sh.Inundacion AS SeguroHogar_Inundacion,
+    sh.Heladera AS SeguroHogar_Heladera,
+    sh.Lavarropas AS SeguroHogar_Lavarropas,
+    sh.Cocina AS SeguroHogar_Cocina,
+    sh.Notebook AS SeguroHogar_Notebook,
+    sh.Televisor AS SeguroHogar_Televisor,
+    sa.Dominio AS SeguroAuto_Dominio,
+    sa.Franquicia AS SeguroAuto_Franquicia,
+    sa.TercerosCompleto AS SeguroAuto_TercerosCompleto,
+    sa.RespCivil AS SeguroAuto_RespCivil,
+    sa.TodoRiesgoCF AS SeguroAuto_TodoRiesgoCF,
+    sa.TodoRiesgoSF AS SeguroAuto_TodoRiesgoSF,
+    sa.Granizo AS SeguroAuto_Granizo,
+    ps.Capital AS Prestamos_Capital,
+    ps.TiempoMeses AS Prestamos_TiempoMeses,
+    ps.Interes AS Prestamos_Interes,
+    ps.Monto AS Prestamos_Monto,
+    ps.CuotaMonto AS Prestamos_CuotaMonto
+   
+FROM
+    clientes c
+LEFT JOIN segurovida sv ON c.IdDato = sv.IdDato
+LEFT JOIN segurohogar sh ON c.IdDato = sh.IdDato
+LEFT JOIN seguroauto sa ON c.IdDato = sa.IdDato
+LEFT JOIN Prestamos ps ON c.IdDato = ps.IdDato
+WHERE
+    c.IdDato = 7; 
+
+
+
+11-Cargar un préstamo a un cliente
+Tabla Servicios, el Cliente IdDato 9 no posee Prestamos: 
+
+
+
+Codigo para cargar el préstamo:
+
+INSERT INTO `prestamos` (`IdDato`,`Cuit`, `Nombre`, `Apellido`, `Capital`, `TiempoMeses`,     `Interes`,`Monto`,`CuotaMonto`) VALUES
+       ('8', '20378964289', 'Alan', 'Cabrera', '500000', '24', '80%', '900000', '37500');
+
+	Modificamos la tabla servicios:
+
+Código:
+UPDATE servicios SET 
+Prestamos = 'SI'
+WHERE IdDato = 9;
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+
+Base de datos: `Banco Marina` / EJ_TP_Final
+
+
+Estructura de tabla para la tabla `clientes`
+
+
+
+CREATE TABLE `clientes` (`IdDato` int(11) NOT NULL,
+  `Cuit` int(9) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `Fecha Nac.` int(8) NOT NULL,
+  `Genero` varchar(30) DEFAULT NULL,
+  `Estado Civil` varchar(30) DEFAULT NULL,
+  `Hijos` int(2) NOT NULL,
+  `Domicilio` varchar(50) DEFAULT NULL,	
+  `Localidad` varchar(50) DEFAULT NULL,
+  `Provincia` varchar(50) DEFAULT NULL,
+  `Telefono` int(12) NOT NULL,
+  `e-mail` varchar(30) DEFAULT NULL,
+  `Cod. Vendedor` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+-----INFO------
+
+
+INSERT INTO `clientes` (`IdDato`, `Cuit`, `Nombre`, `Apellido`, `Fecha Nac.`, `Genero`, `Estado Civil`,`Hijos`, `Domicilio`, `Localidad`, `Provincia`, `Telefono`, `e-mail`, `Cod. Vendedor`) VALUES
+('1', '20283332224', 'Juan', 'Gonzalez', '28121976', 'Masculino', 'Soltero', '0', 'Av. Cruz 1300', 'Parque Patricios', 'Ciudad Autonoma de Bs. As.', '1144552795', 'juangonzalez@gmail.com', '0123'),
+('2', '23361234482', 'Clara', 'Kippes', '12051990', 'Femenino', 'Casada', '2', 'Av. Caseros 3668', 'Parque Patricios', 'Ciudad Autonoma de Bs. As.', '1164345521', 'clarakippes@yahoo.com.ar', '0146'),
+('3', '23309437179', 'Sergio', 'Ramirez ', '23101970', 'Masculino', 'Casado', '4', 'Av. Almafuerte 1500', 'Parque Patricios', 'Ciudad Autonoma de Bs. As.', '1122221515', 'sergio2022@yahoo.com.ar', '0202'),
+('4', '20415542667', 'Victor', 'Pinto', '16121969', 'Masculino', 'Casado', '3', 'Av. Caseros 1800', 'Parque Patricios', 'Ciudad Autonoma de Bs. As.', '1144558765', 'victorp@gmail.com', '0103'),
+('5', '27258799580', 'Maria', 'Rodriguez', '03031989', 'Femenino', 'Soltera', '0', 'Colombres 1300', 'Boedo', 'Ciudad Autonoma de Bs. As.', '1122156699', 'Mariar@hotmail.com.ar', '0242'),
+('6', '27351730930', 'Nuria', 'Nardelli', '22021965', 'Femenino', 'Casada', '3', 'Av. Saenz 1200', 'Nueva Pompeya', 'Ciudad Autonoma de Bs. As.', '113636988', 'nuria1965@gmail.com', '0301'),
+('7', '20237499280', 'Enrique', 'Mamani', '30061972', 'Masculino', 'Divorciado', '2', 'Uspallata 1600', 'Parque Patricios', 'Ciudad Autonoma de Bs. As.', '1125268811', 'enrique72@yahoo.com.ar', '0123'),
+('8', '27312328149', 'Melisa', 'Manzano', '21071995', 'Femenino', 'Soltera', '0', 'Av. La Plata 300', 'Caballito', 'Ciudad Autonoma de Bs. As.', '1132335557', 'meli1995@gmail.com.ar', '0123'),
+('9', '20378964289', 'Alan', 'Cabrera', '27121976', 'Masculino', 'Divorciado', '1', 'Av. Cruz 1233', 'Nueva Pompeya', 'Ciudad Autonoma de Bs. As.', '1166217748', 'alancabrera@yahoo.com.ar', '0146'),
+('10', '20188496300', 'Wilfredo', 'Erico', '09081987', 'Masculino', 'Casado', '2', 'Pepiri 33', 'Parque Patricios', 'Ciudad Autonoma de Bs. As.', '1122998561', 'wilfredo87@hotmail.com.ar', '0123'),
+('11', '23269991114', 'Maria', 'Rosales', '10101978', 'Femenino', 'Casada', '4', 'Pepiri 105', 'Parque Patricios', 'Ciudad Autonoma de Bs. As.', '1144445588', 'wilfredo87@hotmail.com.ar', '0202');
+

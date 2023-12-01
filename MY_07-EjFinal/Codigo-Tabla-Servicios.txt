@@ -1,0 +1,44 @@
+
+Base de datos: `Banco Marina` / EJ_TP_Final
+
+
+Estructura de tabla para la tabla `Servicios`
+
+
+
+CREATE TABLE `servicios` (`IdDato` int(11) NOT NULL,
+  `Cuit` varchar(12) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `SeguroVida` varchar(2) NOT NULL,
+  `SeguroHogar` varchar(2) NOT NULL,
+  `SeguroAuto` varchar(2) NOT NULL,
+  `Prestamos` varchar(12) NOT NULL
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+-----INFO------
+
+
+INSERT INTO `servicios` (`IdDato`, `Cuit`, `Nombre`, `Apellido`, `SeguroVida`, `SeguroHogar`, `SeguroAuto`, `Prestamos`) VALUES
+('1', '20283332224', 'Juan', 'Gonzalez', 'SI', 'NO', 'NO', '900000'),
+('2', '23361234482', 'Clara', 'Kippes', 'SI', 'SI', 'SI', '12500000'),
+('3', '23309437179', 'Sergio', 'Ramirez ', 'NO', 'SI', 'SI', '3750000'),
+('4', '20415542667', 'Victor', 'Pinto', 'SI', 'NO', 'NO', '1620000'),
+('5', '27258799580', 'Maria', 'Rodriguez', 'NO', 'SI', 'SI', '250000000'),
+('6', '27351730930', 'Nuria', 'Nardelli', 'SI', 'NO', 'NO', '360000'),
+('7', '20237499280', 'Enrique', 'Mamani', 'NO', 'SI', 'SI', '3750000'),
+('8', '27312328149', 'Melisa', 'Manzano', 'SI', 'NO', 'NO', 'NO'),
+('9', '20378964289', 'Alan', 'Cabrera', 'Si', 'SI', 'SI', 'NO'),
+('10', '20188496300', 'Wilfredo', 'Erico', 'Si', 'SI', 'SI', 'NO'),
+('11', '23269991114', 'Maria', 'Rosales', 'NO', 'NO', 'NO', 'NO');
+
+
+
+
+
+
+
+
+

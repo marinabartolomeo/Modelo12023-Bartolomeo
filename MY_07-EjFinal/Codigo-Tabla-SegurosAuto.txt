@@ -1,0 +1,37 @@
+
+Base de datos: `Banco Marina` / EJ_TP_Final
+
+
+Estructura de tabla para la tabla `seguroauto`
+
+
+
+CREATE TABLE `seguroauto` (`IdDato` int(11) NOT NULL,
+  `Cuit` int(9) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `Dominio` varchar(10) DEFAULT NULL,
+  `Marca` varchar(30) DEFAULT NULL,
+  `Modelo` varchar(30) DEFAULT NULL,
+  `Franquicia` varchar(2) DEFAULT NULL,
+  `TercerosCompleto` varchar(2) DEFAULT NULL,
+  `RespCivil` varchar(2) DEFAULT NULL,
+  `TodoRiesgoCF` int(6) NOT NULL,
+  `TodoRiesgoSF` varchar(2) DEFAULT NULL,
+  `Granizo` varchar(2) DEFAULT NULL
+   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+-----INFO------
+
+
+INSERT INTO `seguroauto` (`IdDato`, `Cuit`, `Nombre`, `Apellido`, `Dominio`, `Marca`, `Modelo`, `Franquicia`, `TercerosCompleto`, `RespCivil`, `TodoRiesgoCF`, `TodoRiesgoSF`, `Granizo`) VALUES
+('1','23361234482', 'Clara', 'Kippes', 'KKY874', 'Chevrolet', 'Aveo', 'SI', 'NO', 'NO', '20000', 'NO', 'NO'),
+('2','23309437179', 'Sergio', 'Ramirez ', 'AE100AA', 'Audi', 'A3', 'SI', 'NO', 'NO', '80000', 'NO', 'SI'),
+('3','27258799580', 'Maria', 'Rodriguez', 'JAZ369', 'Renault', 'Megane', 'NO', 'NO', 'SI', '80000', 'NO', 'NO'),
+('4','20237499280', 'Enrique', 'Mamani', 'CD250DD', 'Citroen', 'C4', 'SI', 'NO', 'NO', '60000', 'NO', 'SI'),
+('5','20378964289', 'Alan', 'Cabrera', 'CC009AA', 'Volkswagen', 'Golf', 'NO', 'SI', 'NO', '0', 'NO', 'SI'),
+('6','20188496300', 'Wilfredo', 'Erico', 'YYA645', 'Chevrolet', 'Corsa', 'NO', 'NO', 'NO', '0', 'SI', 'SI'),
+('7','2147483647', 'Victor', 'Pinto', 'ZYX997', 'Ford', 'Focus', 'NO', 'SI', 'SI', '0', 'NO', 'SI');
+

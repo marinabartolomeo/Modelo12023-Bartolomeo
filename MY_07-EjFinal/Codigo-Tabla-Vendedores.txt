@@ -1,0 +1,31 @@
+
+ Base de datos: `Banco Marina` / EJ_TP_Final2
+
+
+
+ Estructura de tabla para la tabla `vendedores`
+
+
+
+CREATE TABLE `vendedores` (`IdDato` int(11) NOT NULL,
+  `Cuit` int(9) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `CodVendedor` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+
+-- INFO--
+
+
+
+INSERT INTO `vendedores` (`IdDato`,`Cuit`, `Nombre`, `Apellido`, `CodVendedor`) VALUES
+('1', '20206620553', 'Gonzalo', 'Duda', '0123'),
+('2', '27341802747', 'Clara', 'Ramirez', '0146'),
+('3', '20365155896', 'Cesar', 'Fuentes', '0202'),
+('4', '23301745494', 'Maria', 'Cardenas', '0103'),
+('5', '20359240121', 'Agustin', 'Torres', '0242'),
+('6', '20386542132', 'Mariano', 'Pardo', '0301');
+

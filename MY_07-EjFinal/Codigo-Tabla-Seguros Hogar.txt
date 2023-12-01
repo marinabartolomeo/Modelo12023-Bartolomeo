@@ -1,0 +1,39 @@
+
+Base de datos: `Banco Marina` / EJ_TP_Final
+
+
+Estructura de tabla para la tabla `segurohogar`
+
+
+
+CREATE TABLE `segurohogar` (`IdDato` int(11) NOT NULL,
+  `Cuit` int(9) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `Incendio` varchar(10) DEFAULT NULL,
+  `Robo` varchar(10) DEFAULT NULL,
+  `Inundacion` varchar(10) DEFAULT NULL,
+  `Heladera` varchar(2) DEFAULT NULL,
+  `Lavarropas` varchar(2) DEFAULT NULL,
+  `Cocina` varchar(2) DEFAULT NULL,
+  `Notebook` varchar(2) DEFAULT NULL,
+  `CantidadNotebook` int(2) NOT NULL,
+  `CosolaGames` varchar(2) DEFAULT NULL,
+  `Televisor` varchar(2) DEFAULT NULL,
+  `CantidadTelevisor` int(2) NOT NULL
+   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+-----INFO------
+
+
+INSERT INTO `segurohogar` (`IdDato`, `Cuit`, `Nombre`, `Apellido`, `Incendio`, `Robo`, `Inundacion`, `Heladera`, `Lavarropas`, `Cocina`, `Notebook`, `CantidadNotebook`, `CosolaGames`, `Televisor`, `CantidadTelevisor`) VALUES
+('1', '23361234482', 'Clara', 'Kippes', 'SI', 'SI', 'SI', 'NO', 'NO', 'NO', 'NO', '0', 'NO', 'NO', '0'),
+('2', '23309437179', 'Sergio', 'Ramirez ', 'NO', 'SI', 'NO', 'NO', 'NO', 'NO', 'NO', '0', 'NO', 'NO', '0'),
+('3', '27258799580', 'Maria', 'Rodriguez', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', '2', 'NO', 'SI', '2'),
+('4', '20237499280', 'Enrique', 'Mamani', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'NO', '0', 'SI', 'SI', '2'),
+('5', '20378964289', 'Alan', 'Cabrera', 'NO', 'SI', 'NO', 'No', 'No', 'No', 'SI', '2', 'SI', 'SI', '3'),
+('6', '20188496300', 'Wilfredo', 'Erico', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'No', '0', 'NO', 'SI', '3'),
+('7', '20415542667', 'Victor', 'Pinto', 'NO', 'SI', 'NO', 'SI', 'SI', 'SI', 'Si', '1', 'NO', 'SI', '1');
+
